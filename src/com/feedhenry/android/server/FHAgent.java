@@ -39,7 +39,7 @@ public class FHAgent {
     
 
     public void dataBrowser(String userName, FHActCallback fhActCallback) {
-    	JSONObject param = new JSONObject("{'collection':'Users', 'document': {username: " + userName + "}}");
+    	JSONObject param = new JSONObject("{'collection':'Users', 'document': {username: " + JSONObject.quote(userName) + "}}");
     	this.call("saveData", param, fhActCallback);
 	}
     
